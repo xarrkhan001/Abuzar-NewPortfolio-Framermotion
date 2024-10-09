@@ -1,21 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { LINKS } from "../constants";
 import { RiCloseFill, RiMenu3Fill } from "@remixicon/react";
-import { div, label, link, menu } from "framer-motion/m";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
+
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50">
-        <div
-          className="flex justify-between items-center max-w-6xl mx-auto md:my-2 bg-stone-950/30
-        p-4 md:rounded-xl backdrop-blur-lg"
-        >
+        <div className="flex justify-between items-center max-w-6xl mx-auto p-4 bg-stone-950/30 md:rounded-xl backdrop-blur-lg">
           <div className="text-white font-semibold text-lg uppercase">
             <a href="/">Abuzar</a>
           </div>
@@ -26,6 +22,7 @@ const Navbar = () => {
                 href={link.href}
                 key={index}
                 className="text-white hover:text-stone-400 transition duration-300"
+                onClick={handleLinkClick}
               >
                 {link.label}
               </a>
@@ -48,10 +45,7 @@ const Navbar = () => {
         </div>
 
         {menuOpen && (
-          <div
-            className="md:hidden p-2 bg-stone-950/30 backdrop-blur-lg
-            rounded-xl flex flex-col space-y-4 max-w-6xl mx-auto"
-          >
+          <div className="md:hidden p-4 bg-stone-950/30 backdrop-blur-lg rounded-xl flex flex-col space-y-4 max-w-6xl mx-auto transition-all duration-300 ease-in-out">
             {LINKS.map((link, index) => (
               <a
                 href={link.href}

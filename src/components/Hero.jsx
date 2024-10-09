@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HERO_CONTENT } from "../constants"; // Ensure this path is correct
-import jason from "../assets/nnnn.jpg"; // Ensure this image path is correct
-import cvFile from "../assets/abuzar01-Cv....pdf"; // Import your CV file
+import { HERO_CONTENT } from "../constants";
+import jason from "../assets/nnnn.jpg";
+import cvFile from "../assets/abuzar01-Cv....pdf";
 
-// Define animation variants for text and images
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -31,9 +30,9 @@ const imageVariants = {
 const Hero = () => {
   return (
     <section>
-      <div className="relative z-10 min-h-screen flex flex-col md:flex-row items-center justify-center text-white">
+      <div className="relative z-0 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white">
         <motion.div
-          className="w-full md:w-1/2 p-8"
+          className="w-full md:w-1/2 p-8 pt-24" // Adjust padding-top for spacing below navbar
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -72,7 +71,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="w-full md:w-1/2 p-8 mt-32 md:mt-0 flex justify-center" // Center the image
+          className="w-full md:w-1/2 p-8 mt-10" // Added margin-top to push image down
           initial="hidden"
           animate="visible"
           variants={imageVariants}
@@ -80,11 +79,20 @@ const Hero = () => {
           <img
             src={jason}
             alt="Abuzar"
-            className="max-w-full h-auto rounded-3xl" // Responsive sizing
-            style={{ maxHeight: "650px" }} // Maintain a maximum height
+            width={650}
+            height={650}
+            className="rounded-3xl"
           />
         </motion.div>
       </div>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .w-full.md\\:w-1\\/2.p-8 {
+            margin-top: -40px; /* Adjust this value to move the image up */
+          }
+        }
+      `}</style>
     </section>
   );
 };
