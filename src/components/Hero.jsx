@@ -31,7 +31,7 @@ const imageVariants = {
 const Hero = () => {
   return (
     <section>
-      <div className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white">
+      <div className="relative z-10 min-h-screen flex flex-col md:flex-row items-center justify-center text-white">
         <motion.div
           className="w-full md:w-1/2 p-8"
           initial="hidden"
@@ -39,14 +39,14 @@ const Hero = () => {
           variants={containerVariants}
         >
           <motion.h1
-            className="text-3xl md:text-5xl lg:text-6xl font-semibold my-14" // Bold and larger heading
+            className="text-3xl md:text-5xl lg:text-6xl font-semibold my-14"
             variants={textVariants}
           >
             {HERO_CONTENT.greeting}
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl lg:text-2xl mb-4" // Smaller intro text
+            className="text-lg md:text-xl lg:text-2xl mb-4"
             variants={textVariants}
           >
             {HERO_CONTENT.introduction}
@@ -61,8 +61,8 @@ const Hero = () => {
 
           <motion.a
             className="bg-stone-50 text-stone-900 p-3 lg:p-4 mt-8 inline-block rounded-2xl"
-            href={cvFile} // Directly link to your CV file
-            download="AbuzarCV.pdf" // Set the download filename
+            href={cvFile}
+            download="AbuzarCV.pdf"
             rel="noopener noreferrer"
             target="_blank"
             variants={textVariants}
@@ -72,7 +72,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="w-full md:w-1/2 p-8"
+          className="w-full md:w-1/2 p-8 mt-32 md:mt-0 flex justify-center" // Center the image
           initial="hidden"
           animate="visible"
           variants={imageVariants}
@@ -80,9 +80,8 @@ const Hero = () => {
           <img
             src={jason}
             alt="Abuzar"
-            width={650}
-            height={650}
-            className="rounded-3xl"
+            className="max-w-full h-auto rounded-3xl" // Responsive sizing
+            style={{ maxHeight: "650px" }} // Maintain a maximum height
           />
         </motion.div>
       </div>
