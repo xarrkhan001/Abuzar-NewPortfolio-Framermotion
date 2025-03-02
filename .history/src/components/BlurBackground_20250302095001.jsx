@@ -4,10 +4,11 @@ import React from "react";
 const BlurBackground = () => {
   const circleVariants = {
     animate1: {
-      scale: [1, 1.05, 1],
-      x: [0, 60, 0],
-      y: [0, 30, 0],
-      rotateZ: [0, 12, 0],
+      scale: [1, 1.08, 1],
+      x: [0, 80, 0],
+      y: [0, 40, 0],
+      rotateX: [0, 15, 0],
+      rotateY: [0, 10, 0],
       transition: {
         duration: 3,
         repeat: Infinity,
@@ -16,9 +17,10 @@ const BlurBackground = () => {
     },
     animate2: {
       scale: [1, 1.05, 1],
-      x: [0, 80, 0],
-      y: [0, -40, 0],
-      rotateZ: [0, -12, 0],
+      x: [0, 100, 0],
+      y: [0, -50, 0],
+      rotateX: [0, -12, 0],
+      rotateY: [0, 8, 0],
       transition: {
         duration: 3,
         repeat: Infinity,
@@ -27,9 +29,10 @@ const BlurBackground = () => {
     },
     animate3: {
       scale: [1, 1.1, 1],
-      x: [0, 100, 0],
-      y: [0, 50, 0],
-      rotateZ: [0, 15, 0],
+      x: [0, 120, 0],
+      y: [0, 60, 0],
+      rotateX: [0, 10, 0],
+      rotateY: [0, -15, 0],
       transition: {
         duration: 4,
         repeat: Infinity,
@@ -37,10 +40,11 @@ const BlurBackground = () => {
       },
     },
     animate4: {
-      scale: [1, 1.1, 1],
-      x: [0, 120, 0],
-      y: [0, -60, 0],
-      rotateZ: [0, -15, 0],
+      scale: [1, 1.12, 1],
+      x: [0, 140, 0],
+      y: [0, -70, 0],
+      rotateX: [0, -18, 0],
+      rotateY: [0, 20, 0],
       transition: {
         duration: 4,
         repeat: Infinity,
@@ -48,10 +52,11 @@ const BlurBackground = () => {
       },
     },
     animate5: {
-      scale: [1, 1.12, 1],
-      x: [0, 140, 0],
-      y: [0, 70, 0],
-      rotateZ: [0, 20, 0],
+      scale: [1, 1.15, 1],
+      x: [0, 160, 0],
+      y: [0, 80, 0],
+      rotateX: [0, 5, 0],
+      rotateY: [0, -25, 0],
       transition: {
         duration: 4,
         repeat: Infinity,
@@ -59,10 +64,11 @@ const BlurBackground = () => {
       },
     },
     animate6: {
-      scale: [1, 1.15, 1],
-      x: [0, 160, 0],
-      y: [0, -80, 0],
-      rotateZ: [0, -20, 0],
+      scale: [1, 1.18, 1],
+      x: [0, 180, 0],
+      y: [0, -90, 0],
+      rotateX: [0, 20, 0],
+      rotateY: [0, 15, 0],
       transition: {
         duration: 4,
         repeat: Infinity,
@@ -74,35 +80,36 @@ const BlurBackground = () => {
   return (
     <div
       className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center 
-       bg-gradient-to-br from-[#1c1c2b] via-[#2b2d42] to-[#8d99ae] filter blur-[70px] opacity-60"
+       bg-gradient-to-br from-[#2b2b2b] via-[#3e3e3e] to-[#5f5f5f] filter blur-[60px] opacity-50"
+      style={{ perspective: "800px" }}
     >
       <motion.div
-        className="bg-gradient-to-r from-[#e3e4e8] to-[#d5e1df] w-[350px] h-[250px] rounded-full absolute shadow-lg"
+        className="bg-gradient-to-r from-[#4e82d2] to-[#5a6eb5] w-[350px] h-[250px] rounded-full absolute shadow-2xl"
         variants={circleVariants}
         animate="animate1"
       />
       <motion.div
-        className="bg-gradient-to-r from-[#f3a847] to-[#f1d84d] w-[360px] h-[260px] rounded-full absolute shadow-xl"
+        className="bg-gradient-to-r from-[#6f52e5] to-[#ad8fff] w-[360px] h-[260px] rounded-full absolute shadow-3xl"
         variants={circleVariants}
         animate="animate2"
       />
       <motion.div
-        className="bg-gradient-to-r from-[#1e80b5] to-[#2bced4] w-[370px] h-[270px] rounded-full absolute shadow-2xl"
+        className="bg-gradient-to-r from-[#3b8ad9] to-[#67a4ff] w-[370px] h-[270px] rounded-full absolute shadow-3xl"
         variants={circleVariants}
         animate="animate3"
       />
       <motion.div
-        className="bg-gradient-to-r from-[#9e4e97] to-[#c74b84] w-[380px] h-[280px] rounded-full absolute shadow-2xl"
+        className="bg-gradient-to-r from-[#f35b73] to-[#f8b6b0] w-[380px] h-[280px] rounded-full absolute shadow-4xl"
         variants={circleVariants}
         animate="animate4"
       />
       <motion.div
-        className="bg-gradient-to-r from-[#ff64d4] to-[#8b3ff2] w-[390px] h-[290px] rounded-full absolute shadow-3xl"
+        className="bg-gradient-to-r from-[#8e44ad] to-[#d084fc] w-[390px] h-[290px] rounded-full absolute shadow-5xl"
         variants={circleVariants}
         animate="animate5"
       />
       <motion.div
-        className="bg-gradient-to-r from-[#37a2c2] to-[#4c9fb2] w-[400px] h-[300px] rounded-full absolute shadow-3xl"
+        className="bg-gradient-to-r from-[#7c3d91] to-[#9f77ba] w-[400px] h-[300px] rounded-full absolute shadow-5xl"
         variants={circleVariants}
         animate="animate6"
       />

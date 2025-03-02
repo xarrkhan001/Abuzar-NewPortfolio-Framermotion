@@ -48,11 +48,11 @@ export const PROJECTS = [
     link: "https://fyp-intra-chat-3gdl.vercel.app/",
   },
   {
-    name: "HeritageWalk Footware",
+    name: "PortFolio Old",
     description:
-      "An e-commerce platform for Heritage Walk Footwear specializing in Peshawari and Charsadda chapplas",
+      "Dynamic portfolio showcasing diverse skills and innovative projects in design and development",
     image: projects5,
-    link: "https://heritage-walk-footer-nextjs-project-eccomerce.vercel.app/",
+    link: "https://abuzar-protfolio-renk.vercel.app/",
   },
   {
     name: "Disney clone",
@@ -86,9 +86,19 @@ export const EXPERIENCES = [
     title: "Junior Frontend Developer",
     location: "Peshawar",
     description: [
-      "Completed a 8-month internship at TechPioneers, gaining hands-on experience in frontend development using React.",
+      "Completed a 6-month internship at TechPioneers, gaining hands-on experience in frontend development using React.",
       "Assisted students in web development, providing valuable guidance and support to enhance their learning experience.",
       "Contributed to team projects by implementing responsive design and optimizing user interfaces.",
+    ],
+  },
+  {
+    yearRange: "2024 ",
+    title: "Frontend Developer Intern",
+    location: "Remote",
+    description: [
+      "Completed a 3-month internship at HiskyTech, a software house, where I developed and maintained dynamic, responsive web applications using React, Next.js, and Tailwind CSS, contributing to various client projects.",
+      "Enhanced application performance through effective frontend optimization strategies, focusing on load times and user experience.",
+      "Participated in code reviews and led workshops to mentor junior developers.",
     ],
   },
 ];

@@ -48,11 +48,12 @@ export const PROJECTS = [
     link: "https://fyp-intra-chat-3gdl.vercel.app/",
   },
   {
-    name: "HeritageWalk Footware",
+    name: "PortFolio Old",
     description:
-      "An e-commerce platform for Heritage Walk Footwear specializing in Peshawari and Charsadda chapplas",
+      "Dynamic portfolio showcasing diverse skills and innovative projects in design and development",
     image: projects5,
-    link: "https://heritage-walk-footer-nextjs-project-eccomerce.vercel.app/",
+    link: "3. https://mrbookpeshawar.com/
+4",
   },
   {
     name: "Disney clone",

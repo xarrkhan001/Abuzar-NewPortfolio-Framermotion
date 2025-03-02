@@ -52,7 +52,7 @@ export const PROJECTS = [
     description:
       "An e-commerce platform for Heritage Walk Footwear specializing in Peshawari and Charsadda chapplas",
     image: projects5,
-    link: "https://heritage-walk-footer-nextjs-project-eccomerce.vercel.app/",
+    link: "https://abuzar-protfolio-renk.vercel.app/",
   },
   {
     name: "Disney clone",
